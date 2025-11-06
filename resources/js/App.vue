@@ -1,5 +1,7 @@
 <template>
-    <Principal />
+    <div class="total">
+      <Principal />
+    </div>
 </template>
 <script setup>
  import { ref } from 'vue';
@@ -22,4 +24,5 @@ html, body {
   font-family: 'Poppins', sans-serif;
   color: #4a4a4a;
 }
+
 </style>
