@@ -1,11 +1,12 @@
 <template>
-  <div class="container-fluid p-4">
+  <div class="container-fluid py-5">
     <header class="text-center mb-4">
       <h1 class="titulo"><strong>Bienvenidos</strong></h1>
       <h4 class="subtitulo"><strong>Elige una categoría</strong></h4>
     </header>
 
-    <div id="carouselCategorias" class="carousel slide position-relative">
+    <div class="container-fluid text-center">
+      <div id="carouselCategorias" class="carousel slide">
 
       <!-- Indicadores -->
       <div class="carousel-indicators">
@@ -15,44 +16,19 @@
 
       <!-- Slides -->
       <div class="carousel-inner">
-
         <div class="carousel-item active">
-          <div class="container">
-            <div class="row g-3 justify-content-center">
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="anime" />
-              </div>
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="manga" />
-              </div>
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="futbol" />
-              </div>
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="musica" />
-              </div>
+          <div class="row">
+            <div class="col-6">
+              <Tarjeta 
+                imgSrc="/images/logo-electronicos.png" 
+                alt-text="Electrónica" 
+                caption-text="Electrónica" 
+                url="/categorias/electronica"
+              />
             </div>
           </div>
         </div>
 
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row g-3 justify-content-center">
-              <div class="col-6 col-md-3">
-                <h1>Probando</h1>
-              </div>
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="tecnologia" />
-              </div>
-              <div class="col-6 col-md-3">
-                <Tarjeta categoria="moda" />
-              </div>
-              <div class="col-6 col-md-3">
-                <h1>Probando</h1>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
 
@@ -67,48 +43,50 @@
       </button>
 
     </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import Tarjeta from './Components/Principal/Tarjeta.vue'
+import { ref, onMounted } from 'vue';
+import Tarjeta from './Components/Principal/Tarjeta.vue';
+
 </script>
 
-<style scoped>
+
+
+<style>
 .titulo {
   font-size: 4rem;
   color: white;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 0.5rem;
 }
 
 .subtitulo {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #41a641;
   font-family: 'Poppins', sans-serif;
 }
 
 .carousel-inner {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 /* Asegura que los controles estén fuera del grid visualmente */
 .custom-control {
-  width: 5%;
+  width: 2%;
 }
 
 /* Evita que los botones se encimen con las tarjetas */
 .carousel-control-prev,
 .carousel-control-next {
-  filter: invert(100%);
+  filter: invert(50%);
   top: 45%;
   transform: translateY(-50%);
+  
 }
 
-/* Márgenes entre tarjetas */
-.col {
-  padding: 10px;
-}
+
 
 @media (max-width: 768px) {
   .titulo {
