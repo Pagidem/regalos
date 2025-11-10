@@ -1,18 +1,19 @@
 <template>
-  <a :href="url" class="figure-link-wrapper">
-    <img 
-    :src="imgSrc"
-    :alt="altText"
-    class="figure-img img-fluid rounded">
-  </a>
-
-  <figcaption class="figure-caption text-center">
-    {{ captionText }}
-  </figcaption>
+  <div class="tarjeta">
+    <a :href="url" class="figure-link-wrapper">
+      <img 
+        :src="imgSrc"
+        :alt="altText"
+        class="figure-img img-fluid rounded"
+      >
+    </a>
+    <figcaption class="figure-caption text-center">
+      {{ captionText }}
+    </figcaption>
+  </div>
 </template>
 
 <script setup>
-
 const props = defineProps({
   imgSrc: {
     type: String,
@@ -22,46 +23,52 @@ const props = defineProps({
     type: String,
     default: 'imagen',
   },
-    captionText: {
-        type: String,
-        required: true,
-        default: 'Descripción de la imagen',
-    },
-    url: {
-        type: String,
-        required: true,
-        default: '#',
-    },
+  captionText: {
+    type: String,
+    default: 'Descripción de la imagen',
+  },
+  url: {
+    type: String,
+    default: '#',
+  },
 });
 </script>
 
-<style >
-/* 🎨 Estilos CSS para el efecto de botón interactivo (sin cambios) */
-
-.figure-link-wrapper {
-  text-decoration: none; 
-  color: inherit; 
-  display: block;
+<style scoped>
+.tarjeta {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #ffffff2c; /* leve fondo translúcido */
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Efectos al pasar el cursor (hover) */
-.figure-btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    overflow: hidden; 
+.tarjeta:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.figure-btn:hover {
-    transform: translateY(-5px); /* Desplazar hacia arriba */
-    box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.1)!important; 
-}
-
-/* Efecto de zoom en la imagen */
+/* Imagen */
 .figure-img {
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.figure-btn:hover .figure-img {
-    transform: scale(1.05); 
+.tarjeta:hover .figure-img {
+  transform: scale(1.08);
+}
+
+/* Texto debajo */
+.figure-caption {
+  margin-top: 0.6rem;
+  color: #3a7435;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 </style>

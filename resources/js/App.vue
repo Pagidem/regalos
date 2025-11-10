@@ -1,11 +1,13 @@
 <template>
       <Principal />
 </template>
+
 <script setup>
  import { ref } from 'vue';
  import Principal from './Principal.vue';
 
 </script>
+
 <style>
 html, body {
  

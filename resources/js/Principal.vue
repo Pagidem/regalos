@@ -17,12 +17,73 @@
       <!-- Slides -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col-6">
+          <div class="row g-3 justify-content-center g-1">
+            <div class="col-6 col-md-4 col-lg-3">
               <Tarjeta 
-                imgSrc="/images/logo-electronicos.png" 
-                alt-text="Electrónica" 
-                caption-text="Electrónica" 
+                imgSrc="/images/logo-cocina.png" 
+                altText="Cocina" 
+                captionText="Cocina" 
+                url="/categorias/cocina"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-estanteria.png" 
+                alText="Ordenadores" 
+                captionText="Ordenadores" 
+                url="/categorias/ordenadores"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-mueble.png" 
+                altText="Muebles" 
+                captionText="Muebleria" 
+                url="/categorias/electronica"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-sonido.png" 
+                altText="Sonido" 
+                captionText="Sonido" 
+                url="/categorias/electronica"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3 justify-content-center g-1">
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-cocina.png" 
+                altText="Cocina" 
+                captionText="Cocina" 
+                url="/categorias/cocina"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-estanteria.png" 
+                alText="Ordenadores" 
+                captionText="Ordenadores" 
+                url="/categorias/ordenadores"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-mueble.png" 
+                altText="Muebles" 
+                captionText="Muebleria" 
+                url="/categorias/electronica"
+              />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <Tarjeta 
+                imgSrc="/images/logo-sonido.png" 
+                altText="Sonido" 
+                captionText="Sonido" 
                 url="/categorias/electronica"
               />
             </div>

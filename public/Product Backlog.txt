@@ -1,0 +1,13 @@
+1.- Diseñar Interfaz principal
+	- Titulo
+	- Subtitulo
+	- Tarjeta de categoría
+2. Diseñar Listado de regalos por categoría (Disponibles)
+	- Titulo
+	- Subtitulo
+	- Tarjeta de regalo disponible
+	- Listado completo de tarjetas (10 por scroll)
+3. Diseño de Interfaz de registro
+	- Titulo
+	- Subtitulo
+	- kardex
