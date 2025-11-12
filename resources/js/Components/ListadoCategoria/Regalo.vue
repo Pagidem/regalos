@@ -1,47 +1,96 @@
 <template>
-    <div class="container-fluid">
-        <div class="card mb-3 shadow-sm rounded-3">
-            <div class="card-body d-flexjustify-content-between">
+    <div class="container-fluid p-0 p-md-3">
+        <div class="card mb-4 shadow-lg border-0 rounded-4 product-card">
+            
+            <div class="card-body d-flex flex-column flex-sm-row align-items-center p-3 p-sm-4">
                 
-                <div class="d-flex align-items-center">
-                    <img src="/public/images/logo-sonido.png" alt="" class="img-fluid rounded-circle imagen-fila" />
-                    <div>
-                        <h5 class="card-title"><strong>Nombre del Regalo</strong></h5>
-                        <p class="card-text">Descripción breve del regalo.</p>
+                <div class="rounded-3 gap-3 d-flex align-items-center justify-content-center product-image-container me-3 mb-3 mb-sm-0">
+                    <img src="/public/images/logo-sonido.png" alt="Icono de Producto" class="rounded-3 product-icon " />
+                </div>
+                
+                <div class="flex-grow-1 text-center text-sm-start">
+                    <h5 class="card-title fw-bold text-primary mb-1">Nombre del Producto Premium</h5>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Categoria</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Precio</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Estado</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Cat</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Pre</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="card-text text-muted mb-0">Est</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-success px-2 py-2 fw-semibold">Disponible</span>
-                <a href="#" class="btn btn-warning btn-sm fw-semibold text-white">Seleccionar</a>
+                
+                <div class="d-flex gap-2 d-sm-flex align-items-center">
+                    <span class="badge status-badge bg-danger rounded-pill fw-bold py-2 px-2  ">
+                        De
+                    </span>
+                    <a href="#" class="btn btn-success rounded-pill py-2 px-2 fw-bold text-white">
+                        Seleccionar
+                    </a>
                 </div>
-
-
+                
             </div>
-        </div>
+            
+            </div>
     </div>
 </template>
 
-
 <script setup>
+// Lógica de Vue (vacía para este ejemplo)
 </script>
 
+<style scoped>
+/* Estilos Específicos para la Tarjeta */
 
-<style>
-.imagen-fila {
-    width: 50px;
-    height: auto;
-    max-height: 50px;
+/* Estilo para la Tarjeta base */
+.product-card {
+    transition: transform 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-3px); /* Efecto sutil de elevación al pasar el mouse */
+}
+
+/* Estilo del Contenedor de Imagen (para dar espacio alrededor del ícono) */
+.product-image-container {
+    padding: 5px; /* Pequeño espacio para el ícono */
+    background-color: #f8f9fa; /* Fondo claro para destacar el ícono */
+    border-radius: 8px;
+}
+
+/* Estilo del Ícono/Imagen */
+.product-icon {
+    width: 60px; /* Mayor tamaño para íconos/logos */
+    height: 60px; 
     object-fit: contain;
-    object-position: center;
-    padding: 5px;
 }
 
-.badge {
-  font-size: 0.8rem;       /* iguala tamaño del texto */
-  padding: 0.2rem 0.50rem; /* aumenta el grosor */
-  line-height: 1.2;
+/* Estilo del Badge (para que parezca más un componente de estado que un badge de texto) */
+.status-badge {
+    /* Ajustes mínimos para modernizar el aspecto del badge */
+    font-size: 0.9rem;
 }
 
-
+/* Responsividad: Opcionalmente, puedes ajustar el tamaño de fuente para móvil */
+/*
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+*/
 </style>
