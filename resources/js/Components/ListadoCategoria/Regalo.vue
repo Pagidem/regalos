@@ -2,26 +2,14 @@
     <div class="container-fluid p-0 p-md-3">
         <div class="card mb-4 shadow-lg border-0 rounded-4 product-card">
             
-            <div class="card-body d-flex flex-column flex-sm-row align-items-center p-3 p-sm-4">
+            <div class="card-body d-flex flex-row flex-sm-row align-items-center">
                 
                 <div class="rounded-3 gap-3 d-flex align-items-center justify-content-center product-image-container me-3 mb-3 mb-sm-0">
                     <img src="/public/images/logo-sonido.png" alt="Icono de Producto" class="rounded-3 product-icon " />
                 </div>
                 
                 <div class="flex-grow-1 text-center text-sm-start">
-                    <h5 class="card-title fw-bold text-primary mb-1">Nombre del Producto Premium</h5>
-                    <div class="row">
-                        <div class="col-4">
-                            <p class="card-text text-muted mb-0">Categoria</p>
-                        </div>
-                        <div class="col-4">
-                            <p class="card-text text-muted mb-0">Precio</p>
-                        </div>
-                        <div class="col-4">
-                            <p class="card-text text-muted mb-0">Estado</p>
-                        </div>
-                    </div>
-
+                    <h5 class="card-title fw-bold text-primary mb-1">Regalo</h5>
                     <div class="row">
                         <div class="col-4">
                             <p class="card-text text-muted mb-0">Cat</p>
@@ -34,16 +22,12 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="d-flex gap-2 d-sm-flex align-items-center">
-                    <span class="badge status-badge bg-danger rounded-pill fw-bold py-2 px-2  ">
-                        De
-                    </span>
-                    <a href="#" class="btn btn-success rounded-pill py-2 px-2 fw-bold text-white">
-                        Seleccionar
-                    </a>
-                </div>
-                
+
+            </div>
+
+            <div class="card-footer d-flex justify-content-center bg-white gap-1">
+                <span class="btn bg-warning status-badge text-white rounded-circle"> --- </span>
+                <a href="" class="btn btn-success ">Registrar</a>
             </div>
             
             </div>

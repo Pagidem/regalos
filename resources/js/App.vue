@@ -1,11 +1,13 @@
 <template>
-      <RegalosbyCategoria />
+      <RegalosRegistrados />
 </template>
 
 <script setup>
  import { ref } from 'vue';
  import Principal from './Principal.vue';
  import RegalosbyCategoria from './RegalosbyCategoria.vue';
+ import Kardex from './Kardex.vue';
+ import RegalosRegistrados from './RegalosRegistrados.vue';
 
 </script>
 
