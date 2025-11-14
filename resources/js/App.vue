@@ -1,5 +1,5 @@
 <template>
-      <RegalosRegistrados />
+      <Principal />
 </template>
 
 <script setup>
